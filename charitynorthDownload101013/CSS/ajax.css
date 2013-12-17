@@ -1,0 +1,38 @@
+﻿.ajax__combobox_inputcontainer 
+{
+}
+.ajax__combobox_textboxcontainer
+{
+}
+.ajax__combobox_textboxcontainer input
+{
+}
+.ajax__combobox_buttoncontainer
+{
+}
+.ajax__combobox_buttoncontainer button
+{
+  background-image: url(mvwres://AjaxControlToolkit, Version=3.5.60623.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e/ComboBox.arrow-down.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: ButtonFace;
+  height: 5px;
+  width: 10px;
+}
+.ajax__combobox_itemlist
+{
+    margin: 0px;
+    padding: 0px;
+    cursor: default;
+    list-style-type: none;
+    text-align: left;
+    border: solid 1px ButtonShadow;
+    background-color: Window;
+    color: WindowText;
+}
+.ajax__combobox_itemlist li
+{
+    white-space: nowrap;
+    width: 100%;
+    padding: 0 3px 0 2px;
+}

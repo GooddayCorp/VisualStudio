@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register TagPrefix="MY" TagName="popup" src="~/Calendar/Help/HelpControl.ascx" %>
+<%@ Register Namespace="DataControls" Assembly="DataCalendar" TagPrefix="dc" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.OleDb" %>
+
+<script runat="server">
+
+  protected void Page_Load(object sender, EventArgs e)
+  {
+
+  }
+</script>
+
+<script type="text/javascript">
+//  window.resizeTo(391, 660)
+//  function resize_2_local_settings()
+//  {
+//    window.resizeTo(screen.width, screen.height);
+//  }
+</script>
+<script src="~/js/PopupFunctions.js" type="text/javascript"></script>
+<script src="~/js/FadeGrayoutPopup.js" type="text/javascript"></script>
+<%--<script src="~/js/resize.js" type="text/javascript"></script>
+--%> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head id="Head1" runat="server">
+    <title="Scheduler Master"></title>
+    <link href="~/CSS/reset.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Form.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/branding.css" rel="stylesheet" type="text/css" />  
+    <link href="~/CSS/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />  
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+  </head>
+<body class="masterBody">
+  <form id="mainform" runat="server">
+        <asp:HyperLink ID="backButton1" runat="server" 
+    href="javascript:history.go(-1)" CssClass="backbutton"
+          Font-Underline="False" Width="40px">.
+        </asp:HyperLink>
+  <div id="login" class="popup">
+    <div class="popuptitle">
+      Login</div>
+    <div class="popupbody">
+      <asp:Login ID="Login" runat="server" DestinationPageUrl="Default.aspx">
+      </asp:Login>
+      <input type="button" value="Register" class="buttonpopup" onmousedown="popupOn('register')"
+        onmouseup="popupOff('login')" />
+      <input type="button" value="Change Password" class="buttonpopup" onmousedown="popupOn('passwordchange')"
+        onmouseup="popupOff('login')" />
+    </div>
+  </div>
+  <div id="passwordchange" class="popup">
+    <div class="popuptitle">
+      Change Password</div>
+    <div class="popupbody">
+      <asp:ChangePassword ID="ChangePassword" runat="server" ContinueDestinationPageUrl="~/login.aspx"
+        DisplayUserName="True">
+      </asp:ChangePassword>
+      <input type="button" value="Register" class="buttonpopup" onmousedown="popupOn('register')"
+        onmouseup="popupOff('passwordchange')" />
+    </div>
+  </div>
+  <div id="register" class="popup">
+    <div class="popuptitle">
+      Register</div>
+    <div class="popupbody">
+        <asp:HyperLink ID="backButton0" runat="server" 
+        href="javascript:history.go(-1)" CssClass="backbutton"
+          Font-Underline="False" Width="40px">.
+        </asp:HyperLink>
+      <input type="button" value="Change Password" class="buttonpopup" onmousedown="popupOn('passwordchange')"
+        onmouseup="hidePopup('register')" />
+    </div>
+  </div>
+  <div id="Help" class="popup">
+    <div class="popuptitle">
+      Help</div>
+    <div class="popupbody">
+      <MY:popup runat="server" ID="popup1" />
+      <input type="button" class="buttonpopup" value="Close" onload="popupOn('Help')" onclick="hidePopup('Help')" />
+    </div>
+  </div>
+  <table id="Header" class="header">
+    
+    <tr class="toprow">
+      <td class="toprowleft" colspan="3">
+  <asp:Image ID="Image1" runat="server" ImageUrl="~/Calendar/Images/marshallLogoCropped.JPG" 
+          CssClass="logoImage" ImageAlign="Middle" />
+      </td>
+    </tr>
+    
+    <tr class="toprow">
+      <td class="toprowleft">
+        &nbsp;</td>
+      <td class="toprowmiddle">
+        &nbsp;</td>
+      <td class="toprowright">
+        <asp:LoginName ID="LoginName" runat="server" />
+      </td>
+    </tr>
+    <tr class="nav2">
+      <td id="helpCell" colspan="2">
+        &nbsp;<asp:HyperLink ID="insertHyperLink" runat="server" 
+      NavigateUrl="~/Calendar/ExcelInsertTask.aspx">Add Task
+    </asp:HyperLink>
+  &nbsp; 
+        &nbsp;<input id="HelpButton" type="button" value="Help" class="buttonmaster" onmousedown="toggle('Help')" /></td>
+      <td id="loginbutton">
+        <input id="loginButton" type="button" class="buttonmaster" value="Login" onmouseup="popupOn('login')" />
+        <%--              onmousedown="this.value='';"--%>
+        <asp:LoginStatus class="buttonmaster" ID="LoginStatus" runat="server" LogoutPageUrl="~/default.aspx"
+          LoginText="" Font-Names="Arial" Font-Size="Small" />
+      &nbsp;</td>
+    </tr>
+  </table>
+  <div id="ContentPlaceHolder">
+    <br />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+  </div>
+  <div id="Div1">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+      <asp:HyperLink ID="HyperLink2" runat="server" 
+          NavigateUrl="http://charitynorth.gooddaycorp.com" CssClass="button">Developer: Mike Lanham
+        </asp:HyperLink>
+    </asp:ContentPlaceHolder>
+  </div>
+  </form>
+</body>
+</html>

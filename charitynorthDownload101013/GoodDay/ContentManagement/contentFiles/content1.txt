@@ -1,0 +1,19 @@
+<p><strong><img style="margin-right: auto; margin-left: auto; display: block;" title="earlyworks" src="images/earlyworks.jpg" alt="earlyworks" width="275" height="100" />Content:</strong></p>
+<p><span style="background-color: #ffff00;">Click on the 'Edit Content' button to update or insert text, images and video. Text can be copied and pasted using your clipboard. Images and Video must be uploaded, then inserted. The Image URL is 'uploads/' + file name (e.g., uploads/puzzle.jpg).</span></p>
+<p><span style="background-color: #ffffff;"><img title="Puzzle Image" src="uploads/puzzle.jpg" alt="puzzle image" width="250" height="174" /></span></p>
+<p><span style="background-color: #ffffff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae erat vel mauris venenatis vulputate ut ac nisl. Etiam eget facilisis ante. Vestibulum nec ligula turpis, at tempus nisl. Pellentesque tincidunt accumsan ipsum, at tristique augue posuere non. Suspendisse viverra, quam nec porta ornare, elit orci scelerisque diam, nec interdum erat leo vel arcu. Donec placerat pulvinar velit, at congue justo congue in. Duis quis elit diam. Maecenas scelerisque consequat ligula non pretium. Donec consequat dui vel orci tristique nec eleifend ligula pulvinar. Fusce sit amet luctus nisl. Nam iaculis, massa et ultricies dapibus, lacus eros auctor metus, ut blandit purus velit at ipsum. Quisque ullamcorper, lorem at eleifend consectetur, est ante condimentum nunc, non tincidunt leo velit vitae felis. Quisque varius, neque eget luctus condimentum, est nisl commodo leo, eu luctus velit felis ut lorem. Proin tempor fermentum justo eget pretium. Donec bibendum, lorem faucibus bibendum aliquet, diam ipsum luctus justo, at pulvinar orci quam eget eros. Aliquam mi neque, lacinia nec porttitor eu, dignissim accumsan dolor.</span></p>
+<table style="border: 1px solid green; width: 600px; height: 40px; background-color: #dddddd;" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><strong>Insert Table</strong></td>
+<td style="border: 1px solid green;"><strong>test</strong></td>
+</tr>
+<tr style="border: 1px solid green;">
+<td>Morbi non sapien sed nulla vulputate feugiat. Integer rutrum vulputate eros et hendrerit. Quisque vitae varius quam. In mi leo, aliquam non tempor in, venenatis nec nisi.</td>
+<td><span style="color: #ff0000;">test</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Integer augue metus, pharetra eget iaculis id, consequat vitae ante. Etiam pretium, nisl eget consequat condimentum, magna massa mollis odio, non egestas tortor nisi sollicitudin purus. Mauris vel nibh enim. Duis tempus, augue non tempus congue, nulla arcu ultrices quam, ut adipiscing massa nulla sit amet augue. Cras luctus tincidunt est, sit amet scelerisque nulla mollis eu. Mauris sit amet leo sit amet ipsum ultricies condimentum in eget eros. Cras molestie auctor dolor, id gravida mauris vulputate eu. Sed lobortis, enim vitae faucibus consequat, justo nunc porttitor neque, vitae dignissim nisi ante eu libero. Suspendisse nisl ipsum, blandit ac ullamcorper ac, pretium a turpis. Vestibulum sit amet lorem at tellus scelerisque porttitor.</p>
+<p>&nbsp;</p>

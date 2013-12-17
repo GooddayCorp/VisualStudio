@@ -1,0 +1,22 @@
+﻿body {
+  background-color: #DDDDDD;
+}
+.backbutton {
+	border-style: none;
+	border-width: 0px;
+	width: 17px;
+	background-image: url('../GoodDay/Images/back16.ico');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	vertical-align: middle;
+	height: 15px;
+	padding-top: 5px;
+}
+.tableBody
+{
+	background-color: #DDDDDD;
+}
+#accordianContent
+{
+	top: 0px;
+}

@@ -1,0 +1,276 @@
+﻿body {
+  font-family: Arial, Sans-Serif;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #000000;
+  margin: 0px;
+}
+a, a:visited {
+  text-align: left;
+}
+#top {
+  width: 1024px;
+  background-color: White;
+  margin: 0 auto;
+  left: 10px;
+  clip: rect(auto, auto, auto, 10px);
+}
+#header {
+  background-position: center;
+  background-image: url(../images/header.jpg);
+  height: 102px;
+  background-repeat: no-repeat;
+}
+#header a {
+  display: block;
+  height: 102px;
+  width: 250px;
+  text-align: left;
+}
+#topnav {
+  text-align: left;
+  color: #4b8eb8;
+  font-weight: bold;
+}
+#topnav a {
+  color: #4b8eb8;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+}
+#topnav a:hover {
+    text-decoration: underline;
+}
+#mainTable
+{
+  border-collapse: collapse;
+  width: 100%;
+  vertical-align: top;
+}
+.middleColumn
+{
+  width: 20px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #009999;
+}
+.ticketBox
+{
+  border: 1px solid #000000;
+  width: 400px;
+  vertical-align: top;
+  margin-left: 10px;
+}
+.topRow
+{
+  padding: 10px;
+  background-color: #6AE6D9;
+  color: #009999;
+  font-weight: bold;
+  height: 30px;
+}
+.ticketRow
+    {
+  padding-left: 10px;
+  color: #4B8EB8;
+  padding-bottom: 10px;
+}
+.newTicket
+    {
+  padding-left: 10px;
+  color: #4B8EB8;
+}
+.labels
+{
+  border-color: #4B8EB8;
+  border-width: thin;
+  color: #009999;
+  float: left;
+  vertical-align: top;
+  font-weight: bold;
+}
+.textboxes
+{
+  width: 200px;
+  float: right;
+  vertical-align: top;
+  margin-right: 20px;
+}
+.bottomRow
+{
+  background-color: #6ae6d9;
+}
+.ticketSummary
+{
+  width: 500px;
+  color: #4B8EB8;
+  vertical-align: top;
+}
+.summaryGrid
+{
+  vertical-align: top;
+  margin-left: 20px;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+.repeaterStyle
+{
+  border: 1px solid #009999;
+  color: #009999;
+  empty-cells: show;
+  caption-side: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-collapse: separate;
+}
+#topcontent {
+  padding: 5px;
+  margin: 0 auto;
+  width: 900px;
+  margin-bottom: 10px;
+}
+#buffer {
+    height: 125px;
+}
+/*
+#bottom {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #009999;
+  position: relative;
+  top: -125px;
+  padding: 5px 10px;
+}*/
+#bottom p {
+    font-weight: bold;
+}
+#bottom h1 {
+    color: White;
+    font-size: 18px;
+    margin: 0;
+}
+#bottom p.white {
+    color: White;
+    font-weight: normal;
+}
+#bottom a {
+    color: White;
+}
+#loginbox {
+    background-color: #5081bb;
+    border: solid 2px #385d87;
+    padding: 5px;
+    margin-top: 15px;
+}
+h2 {
+    font-weight: normal;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    font-size: 22px;
+}
+h3, h3 a {
+    font-weight: normal;
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+    color: #009999;
+    font-size: 22px;
+}
+.navButton
+{
+  color: #4b8eb8;
+  background-color: #FFFFFF;
+  border-style: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+}
+#membertable, #contacttable {
+    width: 775px;
+    margin: 0 auto;
+}
+#membertable td {
+    padding: 10px 0px 10px 0px;
+}
+#membertable h2 {
+    text-align: left;
+}
+.formtable td {
+    padding: 2px;
+}
+.formtable input[type=text] {
+    width: 250px;
+}
+.listtable td {
+    padding: 6px 0px;
+}
+.rotatorbuttons {
+    text-align: center;
+}
+.leftCol
+{
+  width: 500px;
+  padding-left: 50px;
+}
+.gridBar
+{
+  color: #4B8EB8;
+  background-color: #A6D9E3;
+  border-top-color: #4B8EB8;
+  border-right-color: #4B8EB8;
+  border-bottom-color: #4B8EB8;
+  border-left-color: #4B8EB8;
+}
+.style2 {
+  width: 152px;
+}
+.style3 {
+  width: 235px;
+  height: 11px;
+}
+.style4 {
+  width: 152px;
+  height: 11px;
+}
+.style5
+    {
+      padding-left: 10px;
+      color: #4B8EB8;
+    }
+.hidden
+{
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.HyperLink2
+{
+  float: none;
+  height: 30px;
+}
+td#toprowRight
+    {
+      padding: 10px;
+    }
+td#toprowLeft
+{
+  padding: 10px;
+}
+tr.toprowContent
+{
+  height: 50px;
+  vertical-align: top;
+}
+.headlabels
+{
+  padding-left: 10px;
+}
+.detailsGrid
+{
+  margin-left: 10px;
+}
+.listBox
+{
+  vertical-align: top;
+}

@@ -1,0 +1,84 @@
+﻿body {
+  background-color: #000080;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.button
+{
+  font-size: small;
+  text-decoration: none;
+  background-repeat: no-repeat;
+}
+.toprow
+{
+  background-color: #000000;
+  color: #EFD51F;
+}
+.toprowleft
+{
+  text-decoration: none;
+  color: #000000;
+  text-indent: 0;
+  vertical-align: bottom;
+}
+.toprowmiddle
+{
+  text-decoration: none;
+  color: #000000;
+}
+
+.toprowright
+{
+}
+
+.form
+{
+  border: 2px solid #000000;
+  background-color: #000080;
+  width: 360px;
+}
+.masterBody
+{
+  background-color: #FFFFFF;
+  margin-top: 1px;
+}
+
+.left
+{
+  float: left;
+}
+
+.deletedTask
+{
+  color: #FF0000;
+}
+.normalTask
+{
+}
+
+.backbutton
+{
+  background-image: url('../Images/back16.ico');
+  background-repeat: no-repeat;
+  width: 30px;
+  margin-bottom: 1px;
+}
+.logoImage
+{
+  background-color: #000000;
+  background-repeat: no-repeat;
+  width: 70%;
+  color: #000000;
+  max-width: 350px;
+}
+.tableBody
+{
+  background-color: #EFD51F;
+  width: 360px;
+}
+.tableHead
+{
+  width: 362px;
+  background-color: #000000;
+}

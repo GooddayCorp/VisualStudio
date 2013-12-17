@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMapNode url=""
+						 title="Main Menu"
+						 description="Top-level of Menu Tree" >
+	<siteMapNode url="~/Default.aspx"
+							 title="Resume"
+							 description="Coverleter" >
+		<siteMapNode url="~/Goodday/Resume/resumehighlights.aspx"
+								 title="Resume Highlights"
+								 description="My resume in short form." />
+		<siteMapNode url="~/Goodday/Resume/resumedetailed.aspx"
+							 title="Resume Details"
+							 description="My resume in long form." />
+		<siteMapNode url="~/Goodday/Resume/casestudies.aspx"
+								 title="PM Case Studies"
+								 description="Project Management Case Studies." />
+		<siteMapNode url="~/Goodday/PublicContent/changemanagement.aspx"
+								 title="Managing Change"
+								 description="A dare to take risks." />
+	</siteMapNode>
+
+	<siteMapNode url=""
+                 title="Qualifications"
+                 description="Proof of degrees, and certifications." >
+      <siteMapNode url="~/Goodday/Resume/PhdVerification.aspx"
+                   title="UCSB PhD"
+                   description="Letter showing PhD was granted in 1992 by University of California." />
+      <siteMapNode url="~/Goodday/Resume/PMPVerification.aspx"
+                   title="PMP Certification"
+                   description="Certificate showing PMP was granted in 2000 by PMI." />
+	</siteMapNode>
+	
+      <siteMapNode url=""
+                 title="Portfolio"
+                 description="Examples of my work" >
+				<siteMapNode url=""
+                 title="Demos: VB"
+                 description="Examples of VB pages." >			
+					<siteMapNode url="http://www.gooddaycorp.com"
+											 title="Data Calendar"
+											 description="Databound Calendar (use guest/marshall for username/password)" />
+					<siteMapNode url="~/PayPal/default.aspx"
+											title="Shopping Cart"
+											description="Shopping Cart with PayPal" />
+					<siteMapNode url="~/stockScreenScraper.aspx"
+												 title="Screen Scraper"
+												 description="Yahoo Screen Scraper with VB" />
+					<siteMapNode url="~/Goodday/PublicContent/VBAProjects.aspx"
+												 title="VBA Snippets"
+												 description="Office Automation with VBA" />
+				</siteMapNode>
+
+				<siteMapNode url=""
+										title="Demos: C# w/ JS"
+										description="Functionality Demonstration Pages" >
+					<siteMapNode url="~/Goodday/OnlyAdmin/AdminAllTickets.aspx"
+											title="Trouble Tickets"
+											description="Ticket management, using SQL Server (use csr/csr for username/password)." />				
+					<siteMapNode url="~/Goodday/ContentManagement/userInput.aspx"
+											title="Content Management"
+											description="User, self-help, input to keep site updated." />
+					<siteMapNode url="http://charting.gooddaycorp.com"
+											title="Drill-down Chart"
+											description="Drill-down Chart" />
+					<siteMapNode url="~/Goodday/PublicContent/StockCharts.aspx"
+											title="Stock Chart"
+											description="Yahoo Stock Charts" />          
+      </siteMapNode>
+				
+				<siteMapNode url=""
+											title="Demos: JavaScript"
+											description="Client-side script demos" >
+					<siteMapNode url="~/Home.aspx"
+											title="Flash Video"
+											description="Macromedia Shokwave Flash" />
+					<siteMapNode url="~/SlideShow.aspx"
+											title="Image Rotator"
+											description="telerik:RadRotator" />
+					<siteMapNode url="~/location.htm"
+											title="Your Location"
+											description="Geodetic Location" />
+				</siteMapNode>
+			</siteMapNode>
+
+			<siteMapNode url=""
+                 title="Interests"
+                 description="The Universe is good." >
+      <siteMapNode url="~/Goodday/Interests/interestsgeneral.aspx"
+                   title="General Interests"
+                   description="My interests in summary." />
+      <siteMapNode url="~/Goodday/Interests/interestsspecific.aspx"
+                   title="Specific Interests"
+                   description="My interests in detail." >
+        <siteMapNode url="~/Goodday/Interests/systemexample.aspx"
+                     title="System Example"
+                     description="The earth/moon system, an example." />
+        <siteMapNode url="~/Goodday/Interests/systemfundamentals.aspx"
+                     title="Fundamentals"
+                     description="The basic characteristics of a system." />
+      </siteMapNode>
+		</siteMapNode>
+</siteMapNode>
+
+		

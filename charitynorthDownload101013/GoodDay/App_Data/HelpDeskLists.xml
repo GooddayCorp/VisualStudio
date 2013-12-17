@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<lookup>
+<!--Topics List-->
+    <Topic ID="1" Name="Information Request" Value="Information Request"/>
+    <Topic ID="2" Name="Installation Help"  Value="Installation Help"/>
+    <Topic ID="3" Name="New Services Request"  Value="New Services Request"/>
+    <Topic ID="4" Name="Functionality Extention Request" Value="Functionality Extention Request"/>
+    <Topic ID="5" Name="Error Message" Value="Error Message"/>
+    <Topic ID="6" Name="Unexpected Output"  Value="Unexpected Output"/>
+    <Topic ID="7" Name="Workflow Issue"  Value="Workflow Issue"/>
+    <Topic ID="8" Name="Other"  Value="Other"/>
+<!--Status List-->    
+    <Status ID="1" Name="new" Value="new"/>
+    <Status ID="2" Name="active" Value="active"/>
+    <Status ID="3" Name="pending" Value="pending"/>
+    <Status ID="4" Name="hold" Value="hold"/>
+    <Status ID="5" Name="closed" Value="closed"/>
+<!--Downloads List-->    
+    <Downloads ID="1" Name="Test.txt" Value="../Downloads/Test.txt"/>
+    <Downloads ID="2" Name="UsersGuide.pdf" Value="../Downloads/UsersGuide.pdf"/>
+    <Downloads ID="3" Name="FAQ.doc" Value="../Downloads/FAQ.doc"/>
+    <Downloads ID="4" Name="GettingStarted.doc" Value="../Downloads/GettingStarted.doc"/>
+    <Downloads ID="5" Name="TroubleShootingGuide.doc" Value="../Downloads/TroubleShootingGuide.doc"/>
+    <Downloads ID="6" Name="AboutScreenShots.aspx" Value="../Downloads/AboutScreenShots.aspx"/>
+</lookup>

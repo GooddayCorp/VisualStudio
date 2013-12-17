@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode> 
+    <siteMapNode url="~/Goodday/OnlyUnrestricted/ContactUs.aspx" 
+      title="Contact Us"  description="Contact Us" />
+    <siteMapNode url="~/Goodday/OnlyMembers/Members.aspx" 
+      title="Members"  description="New Ticket" />
+    
+    <siteMapNode url="" 
+      title="Admin"  description="">
+      <siteMapNode url="~/Goodday/OnlyAdmin/Admin.aspx"
+        title="Tickets by Company"  description="Manage Tickets, Select on Company" />
+      <siteMapNode url="~/Goodday/OnlyAdmin/AdminAllTickets.aspx" 
+        title="Tickets with Details"  description="Manage Tickets with Summary and Details grids" />
+      <!--<siteMapNode url="~/Goodday/OnlyAdmin/AdminAllTicketsUnfiltered.aspx" 
+        title="All Tickets"  description="Manage All Tickets without filters" />-->
+      <siteMapNode url="~/Goodday/OnlyAdmin/AdminAllNotes.aspx" 
+        title="All Responses"  description="Manage All Responses without filters" />
+      <siteMapNode url="~/Goodday/OnlyAdmin/AdminNewContacts.aspx"
+        title="New Contacts"  description="Manage New Contacts" />
+      <siteMapNode url="~/Goodday/OnlyAdmin/Access/access_rule_summary.aspx"
+        title="Membership"  description="Manage user authorization (password, roles)" />
+      <siteMapNode url=""
+        title="Admin"  description="Only Owner Role is authorized access.">
+        <siteMapNode url="~/Goodday/OnlyOwner/AdminDeleteTickets.aspx"
+          title="Manage GoodDb Tickets"  description="Mangage tickets." />
+        <siteMapNode url="~/Goodday/OnlyOwner/AdminContacts.aspx"
+          title="GoodDb Users"  description="Manage GoodDb Contacts " />
+        <siteMapNode url="~/Goodday/OnlyOwner/aspnetUsers.aspx"
+          title="AspNetDb Users"  description="Manage ApsNetDb Users." />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

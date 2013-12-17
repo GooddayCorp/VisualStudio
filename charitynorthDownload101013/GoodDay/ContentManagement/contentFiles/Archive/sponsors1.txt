@@ -1,0 +1,8 @@
+<h4>Our Partner Organizations</h4>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.hiwaay.net" target="_blank"><img src="images/hiwaay.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.earlyworks.com" target="_blank"><img src="images/earlyworks.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.waaytv.com/" target="_blank"><img src="images/WAAY31FirstNewsFinal.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.wdrm.com/" target="_blank"><img src="images/drmNEWcolor.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.wtak.com/" target="_blank"><img src="images/tak.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.1003theriver.com/" target="_blank"><img src="images/river.jpg" alt="" border="0" /></a></div>
+<div class="sponsor"><a style="text-decoration: none;" href="http://www.huntsvilletimes.com/" target="_blank"><img src="images/huntsville-times.jpg" alt="" border="0" /></a></div>

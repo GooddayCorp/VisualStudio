@@ -1,0 +1,121 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="nakedAccordian.aspx.cs" Inherits="Accordion_nakedAccordian" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register
+    Assembly="AjaxControlToolkit"
+    Namespace="AjaxControlToolkit"
+    TagPrefix="ajaxToolkit" %>
+<%@ Register Namespace="DataControls" Assembly="DataCalendar" TagPrefix="dc" %>
+<%@ Register Namespace="downloadClassLibrary" Assembly="downloadClassLibrary" TagPrefix="ftp" %>
+<%@ Register TagPrefix="MY" TagName="popup" src="~/Calendar/Help/HelpControl.ascx" %>
+<%@ Register Namespace="DataControls" Assembly="DataCalendar" TagPrefix="dc" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.OleDb" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/CSS/reset.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Form.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/branding.css" rel="stylesheet" type="text/css" />  
+    <link href="~/CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/accordian.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager runat="server" ID="ScriptManager1" />
+    <div class="demoarea">
+        <div class="demoheading">Accordion Demonstration</div>
+    <table>
+      <tr>
+        <td width="250px">&nbsp;</td>
+        <td width="850px">&nbsp;</td>
+        <td width="250px">
+          <ajaxToolkit:Accordion ID="MyAccordion" runat="server" SelectedIndex="0"
+            HeaderCssClass="accordionHeader" HeaderSelectedCssClass="accordionHeaderSelected"
+            ContentCssClass="accordionContent" FadeTransitions="true" FramesPerSecond="40" 
+            TransitionDuration="250" AutoSize="Limit" RequireOpenedPane="false" SuppressHeaderPostbacks="true">
+           <Panes>
+            <ajaxToolkit:AccordionPane ID="AccordionPane1" runat="server">
+                <Header>Data Calendar</Header>
+                <Content>
+                  <iframe id="productsInCategory" src="../Calendar/DataCalendar.aspx" 
+                    style="border-style: none; border-color: inherit; border-width: medium; height: 352px; width: 365px;" 
+                    frameborder="0">
+                  </iframe>
+                </Content>
+            </ajaxToolkit:AccordionPane>
+            <ajaxToolkit:AccordionPane ID="AccordionPane2" runat="server">
+                <Header>Add Task</Header>
+                <Content>
+                  <iframe id="Iframe1" src="../Calendar/ExcelInsertTask.aspx" 
+                    style="border-style: none; border-color: inherit; border-width: medium; height: 339px; width: 364px;" 
+                    frameborder="0">
+                  </iframe>
+                </Content>
+            </ajaxToolkit:AccordionPane>
+            <ajaxToolkit:AccordionPane ID="AccordionPane3" runat="server">
+                <Header>Update/Delete Task</Header>
+                <Content>
+                  <iframe id="Iframe2" src="../Calendar/DataCalendar.aspx" 
+                    style="border-style: none; border-color: inherit; border-width: medium; height: 352px; width: 365px;" 
+                    frameborder="0">
+                  </iframe>
+                </Content>
+            </ajaxToolkit:AccordionPane>
+<%--            <ajaxToolkit:AccordionPane ID="AccordionPane4" runat="server">
+                <Header><a href="" class="accordionLink">4. What is ASP.NET AJAX?</a></Header>
+                <Content>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/AJAX.gif" AlternateText="ASP.NET AJAX" ImageAlign="right" />
+                </Content>
+            </ajaxToolkit:AccordionPane>--%>
+            </Panes>
+          </ajaxToolkit:Accordion>
+        </td>
+      </tr>
+    </table>
+        
+        Fade Transitions: <input id="fade" type="checkbox" onclick="toggleFade();" value="false" /><br />
+        AutoSize: <select id="autosize" onchange="changeAutoSize();">
+            <option selected="selected">None</option>
+            <option>Limit</option>
+            <option>Fill</option>
+        </select>
+        
+        <script language="javascript" type="text/javascript">
+            function toggleFade() {
+                var behavior = $find('ctl00_SampleContent_MyAccordion_AccordionExtender');
+                if (behavior) {
+                    behavior.set_FadeTransitions(!behavior.get_FadeTransitions());
+                }
+            }
+            function changeAutoSize() {
+                var behavior = $find('ctl00_SampleContent_MyAccordion_AccordionExtender');
+                var ctrl = $get('autosize');
+                if (behavior) {
+                    var size = 'None';
+                    switch (ctrl.selectedIndex) {
+                        case 0 :
+                            behavior.get_element().style.height = 'auto';
+                            size = AjaxControlToolkit.AutoSize.None;
+                            break;
+                        case 1 :
+                            behavior.get_element().style.height = '400px';
+                            size = AjaxControlToolkit.AutoSize.Limit;
+                            break;
+                        case 2 :
+                            behavior.get_element().style.height = '400px';
+                            size = AjaxControlToolkit.AutoSize.Fill;
+                            break;
+                    }
+                    behavior.set_AutoSize(size);
+                }
+                if (document.focus) {
+                    document.focus();
+                }
+            }
+        </script>
+    </div>   
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+This page "screen scrapes", that is, uses System.Net.HttpRequest to get the content from another website, http://finance.yahoo.com/.<br/><br/> 
+Here is a VB code snippet:<br/>
+		<p style="margin-left:50px;">Dim strURL As String = "http://finance.yahoo.com/q?s="<br/>
+		strURL = strURL & symbol<br/>
+		objWebRequest = CType(System.Net.WebRequest.Create(strURL), System.Net.HttpWebRequest)<br/>
+		objWebRequest.Method = "GET"<br/>
+		objWebResponse = CType(objWebRequest.GetResponse(), System.Net.HttpWebResponse)<br/>
+		streamReader = New System.IO.StreamReader(objWebResponse.GetResponseStream)<br/>
+		strHTML = streamReader.ReadToEnd</p><br/>
+<p style="margin-left:50px;">C# code:<br/>
+		 	public String GetHtmlPage(string strURL)<br/>
+		{// the html retrieved from the page<br/>
+		<span style="margin-left:20px;">String strResult; WebResponse objResponse;</span><br/>
+		<span style="margin-left:20px;">WebRequest objRequest = System.Net.HttpWebRequest.Create(strURL);<br/></span><br/>
+		<span style="margin-left:20px;">objResponse = objRequest.GetResponse();</span><br/>
+		<span style="margin-left:20px;">// the using keyword will automatically dispose the object once done</span><br/>
+		<span style="margin-left:20px;">using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))</span><br/>
+		<span style="margin-left:20px;">{</span><br/>
+			<span style="margin-left:40px;">strResult = sr.ReadToEnd();// Close and clean up the StreamReadersr.Close();}</span><br/>
+			<span style="margin-left:40px;">return strResult;</span><br/>
+		<span style="margin-left:20px;">}</span><br/>
+		}</p>
+<br/>
+This code gets the binary data from the requested page, converts it to a string, which is parsed to find stock quotes. The trickest part of the process is finding the best substring to parse with. Here is a snippet:<br/>
+		<p style="margin-left:50px;">'parse for current price<br/>
+		Dim intPos1, intPos2, intPos3 As Integer<br/>
+		Dim searchString1 As String = "(" & symbol & ")"<br/>
+		Dim searchString2 As String = "_" & symbol.ToLower & """>"<br/>
+		Dim symbolLen As Integer = Len(symbol)<br/>
+		intPos1 = strHTML.IndexOf(searchString1, 0)<br/>
+		intPos2 = strHTML.IndexOf(searchString2, intPos1)<br/>
+		intPos3 = strHTML.IndexOf(".", intPos2)<br/>
+		Dim test1 As String = strHTML.Substring(intPos2 + symbolLen + 3, intPos3 - intPos2 - symbolLen).Replace(" ", vbNullString)<br/>
+		resultsTable.Rows(I).Cells(1).InnerHtml = strHTML.Substring(intPos2 + symbolLen + 3, intPos3 - intPos2 - symbolLen).Replace(" ", vbNullString)</p><br/>
+<p>
+The parsing code uses the stock symbol, concatenated with parenthesis to parse the string for current price. This substring was first determined to be present on the webpage by browsing to the page, then using 'View Source' to inspect the page.</p>

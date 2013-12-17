@@ -1,0 +1,6 @@
+<Goods>
+  <Good id="0" name="Asics Blur" ImageUrl="~/PayPal/Images/GoodsImages/AsicsBlur.jpg" description=" Running Shoe" price="110.01" />
+  <Good id="1" name="New Balance" ImageUrl="~/PayPal/Images/GoodsImages/NewBalance.jpg" description=" Running Shoe" price="69.99" />
+  <Good id="2" name="Reebok" ImageUrl="~/PayPal/Images/GoodsImages/Reebok.jpg" description=" Running Shoe" price="80.56" />
+  <Good id="3" name="Saucony" ImageUrl="~/PayPal/Images/GoodsImages/Saucony.jpg" description=" Running Shoe" price="139.99" />
+</Goods>

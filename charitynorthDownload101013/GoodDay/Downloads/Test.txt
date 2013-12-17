@@ -1,0 +1,200 @@
+1.
+// CREATE EMAIL
+ 
+2.
+// first we create a plain text version and set it to the AlternateView
+ 
+3.
+// then we create the HTML version
+ 
+4.
+MailMessage msg = new MailMessage();
+ 
+5.
+ 
+ 
+6.
+msg.From = new MailAddress(TextBoxYourEmail.Text);
+ 
+7.
+msg.Subject = "Event: " + labelEventName.Text;
+ 
+8.
+msg.To.Add(TextBoxEmail1.Text);
+ 
+9.
+ 
+ 
+10.
+// create a string to hold all email addresses
+ 
+11.
+StringBuilder sbEmailTo = new StringBuilder();
+ 
+12.
+sbEmailTo.Append(TextBoxEmail1.Text);
+ 
+13.
+ 
+ 
+14.
+if (!String.IsNullOrEmpty(TextBoxEmail2.Text)) { msg.To.Add(TextBoxEmail2.Text); sbEmailTo.Append(", " + TextBoxEmail2.Text); }
+ 
+15.
+if (!String.IsNullOrEmpty(TextBoxEmail3.Text)) { msg.To.Add(TextBoxEmail3.Text); sbEmailTo.Append(", " + TextBoxEmail3.Text); }
+ 
+16.
+if (!String.IsNullOrEmpty(TextBoxEmail4.Text)) { msg.To.Add(TextBoxEmail4.Text); sbEmailTo.Append(", " + TextBoxEmail4.Text); }
+ 
+17.
+if (!String.IsNullOrEmpty(TextBoxEmail5.Text)) { msg.To.Add(TextBoxEmail5.Text); sbEmailTo.Append(", " + TextBoxEmail5.Text); }
+ 
+18.
+ 
+ 
+19.
+String plainEmail = TextBoxYourName.Text + " has invited you to an event! \r\n \r\n" +
+ 
+20.
+    "Event Name: " + labelEventName.Text + "\n" +
+ 
+21.
+    "Event Date: " + eventTextBox.Text + "\n" +
+ 
+22.
+    "Event Description: " + labelEventDescription.Text + "\r\n \r\n" +
+ 
+23.
+    "Message: " + TextBoxPersonalMessage.Text;
+ 
+24.
+ 
+ 
+25.
+//first we create the Plain Text part
+ 
+26.
+AlternateView plainView = AlternateView.CreateAlternateViewFromString(plainEmail, null, "text/plain");
+ 
+27.
+msg.AlternateViews.Add(plainView);
+ 
+28.
+ 
+ 
+29.
+//now create the HTML version
+ 
+30.
+MailDefinition message = new MailDefinition();
+ 
+31.
+message.BodyFileName = "email.htm";
+ 
+32.
+message.IsBodyHtml = true;
+ 
+33.
+message.From = TextBoxYourEmail.Text;
+ 
+34.
+message.Subject = "Zoo Event: " + labelEventName.Text;
+ 
+35.
+ 
+ 
+36.
+//embed images for the email
+ 
+37.
+EmbeddedMailObject emo = new EmbeddedMailObject();
+ 
+38.
+emo.Path = @"~\Images\email\hdr_roar.gif";
+ 
+39.
+emo.Name = "hdr";
+ 
+40.
+ 
+ 
+41.
+EmbeddedMailObject emo2 = new EmbeddedMailObject();
+ 
+42.
+emo2.Path = @"~\Images\email\box_top.gif";
+ 
+43.
+emo2.Name = "box_top";
+ 
+44.
+ 
+ 
+45.
+message.EmbeddedObjects.Add(emo);
+ 
+46.
+message.EmbeddedObjects.Add(emo2);
+ 
+47.
+ 
+ 
+48.
+//Build replacement collection to replace fields in email.htm file
+ 
+49.
+ListDictionary replacements = new ListDictionary();
+ 
+50.
+replacements.Add("<%EVENTDATE%>", eventTextBox.Text);
+ 
+51.
+replacements.Add("<%EVENTNAME%>", labelEventName.Text);
+ 
+52.
+replacements.Add("<%FROMNAME%>", TextBoxYourName.Text);
+ 
+53.
+replacements.Add("<%EVENTDESCRIPTION%>", labelEventDescription.Text);
+ 
+54.
+replacements.Add("<%PERSONALMESSAGE%>", TextBoxPersonalMessage.Text);
+ 
+55.
+ 
+ 
+56.
+//now create mail message using the mail definition object
+ 
+57.
+//the CreateMailMessage object takes a source control object as the last parameter, 
+
+58.
+//if the object you are working with is webcontrol then you can just pass "this", 
+
+59.
+//otherwise create a dummy control as below.
+ 
+60.
+MailMessage msgHtml = message.CreateMailMessage(sbEmailTo.ToString(), replacements, new LiteralControl());
+ 
+61.
+ 
+ 
+62.
+AlternateView htmlView = AlternateView.CreateAlternateViewFromString(msgHtml.Body, null, “text/html");
+ 
+63.
+msg.AlternateViews.Add(htmlView);
+ 
+64.
+ 
+ 
+65.
+// send email now (check web.config)
+ 
+66.
+SmtpClient smtp = new SmtpClient();
+ 
+67.
+smtp.Send(msg); 

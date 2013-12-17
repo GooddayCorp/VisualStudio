@@ -1,0 +1,32 @@
+   For Each itm In ritms
+      If itm.Class = olAppointment Then
+         'Process item only if it is an appointment item
+         I = I + 1
+         'Set rng = wks.Cells(I, J)
+         wks.Cells(I, 1).Value = itm.Subject
+         Debug.Print wks.Cells(I, 1).Value, itm.Subject
+         wks.Cells(I, 2).Value = itm.startDate
+         wks.Cells(I, 3).Value = itm.startTime
+         wks.Cells(I, 4).Value = itm.endDate
+         wks.Cells(I, 5).Value = itm.endTime
+         wks.Cells(I, 6).Value = itm.AllDayEvent
+         wks.Cells(I, 7).Value = itm.reminderonoff
+         wks.Cells(I, 8).Value = itm.reminderdate
+         wks.Cells(I, 9).Value = itm.ReminderTime
+         wks.Cells(I, 10).Value = itm.meetingorganizer
+         wks.Cells(I, 11).Value = itm.RequiredAttendees
+         wks.Cells(I, 12).Value = itm.OptionalAttendees
+         wks.Cells(I, 13).Value = itm.meetingrecources
+         wks.Cells(I, 14).Value = itm.BillingInformation
+         wks.Cells(I, 15).Value = itm.Categories
+         wks.Cells(I, 16).Value = itm.Description
+         wks.Cells(I, 17).Value = itm.Location
+         wks.Cells(I, 18).Value = itm.Mileage
+         wks.Cells(I, 19).Value = itm.Priority
+         wks.Cells(I, 20).Value = itm.Private
+         wks.Cells(I, 21).Value = itm.Sensitivity
+         wks.Cells(I, 22).Value = itm.showtimeas
+
+      End If
+      I = I + 1
+   Next itm

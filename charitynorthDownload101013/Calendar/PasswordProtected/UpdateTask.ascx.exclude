@@ -1,0 +1,129 @@
+﻿<%@ Control Language="VB" AutoEventWireup="false" CodeFile="UpdateTask.ascx.vb" Inherits="Calendar_PasswordProtected_UpdateTask" %>
+   <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+  <link href="~/CSS/reset.css" rel="stylesheet" type="text/css" />
+  <link href="~/CSS/Form.css" rel="stylesheet" type="text/css" />
+  <link href="~/CSS/style.css" rel="stylesheet" type="text/css" />
+  <link href="~/CSS/branding.css" rel="stylesheet" type="text/css" />
+  <div>
+<%--    <table class="tableHead">
+      <tr class="toprow">
+            <td valign="top" colspan="2">
+              <asp:Image ID="Image1" runat="server" cssclass="logoImage"
+                ImageUrl="~/Calendar/Images/marshallLogoCropped.JPG" ImageAlign="Middle" 
+                Width="100%" />
+            </td>
+      </tr>
+      <tr >
+        <td colspan="2" class="nav2">
+          <asp:HyperLink ID="scheduleHyperLink" runat="server" 
+            NavigateUrl="~/default.aspx" >Job Schedule
+          </asp:HyperLink>
+          &nbsp;&nbsp;&nbsp;
+          <asp:HyperLink ID="insertHyperLink" runat="server" NavigateUrl="~/Calendar/ExcelInsertTask.aspx">Add Task
+          </asp:HyperLink>
+        </td>
+      </tr>
+      </table >
+--%>
+   <table class="tableBody">
+      <tr>
+        <td colspan="2">
+           <h4>Update/Delete Task</h4>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          &nbsp;
+        </td>
+        <td height="5px">
+          <asp:Label ID="taskIDLabel" runat="server" Visible="False"></asp:Label>
+          <asp:Label ID="CreatedLabel" runat="server" Visible="False"></asp:Label>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Task:
+        </td>
+        <td>
+          <asp:TextBox Width="250px" ID="SubjectTextBox" runat="server">11-0-xxxx Job Name Category</asp:TextBox>
+          <asp:RequiredFieldValidator ID="rfv_Subject" ControlToValidate="SubjectTextBox" runat="server">* This is a required field</asp:RequiredFieldValidator>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Start:
+        </td>
+        <td valign="top" height="5px">
+          <asp:TextBox ID="startDateTextBox" runat="server" ToolTip="click to see calendar"
+            Width="100px">mm/dd/yyyy</asp:TextBox>
+          <asp:CalendarExtender ID="startDateTextBox_CalendarExtender" runat="server" Enabled="True"
+            TargetControlID="startDateTextBox">
+          </asp:CalendarExtender>
+          &nbsp;<asp:TextBox ID="StartTimeTextBox" runat="server" Width="100px" Text="8:00:00"></asp:TextBox>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Duration:
+        </td>
+        <td valign="top">
+          <asp:TextBox ID="DurationTextBox" runat="server" Width="40px">1</asp:TextBox>
+          &nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Categories:
+        </td>
+        <td valign="top">
+          <asp:DropDownList ID="CategoriesListBox" runat="server" Width="250px" />
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Location:
+        </td>
+        <td valign="top">
+          <asp:TextBox ID="LocationTextBox" runat="server" Width="250px" />
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Notes:
+        </td>
+        <td valign="top">
+          <asp:TextBox ID="BodyTextBox" runat="server" Height="58px" TextMode="MultiLine" Width="250px" />
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Crew:
+        </td>
+        <td valign="top">
+          <asp:TextBox ID="CrewTextBox" runat="server" Height="58px" TextMode="MultiLine" Width="250px" />
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          Organizer:
+        </td>
+        <td valign="top">
+          <asp:TextBox ID="OrganizerTextBox" runat="server" Width="250px" />
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+        </td>
+        <td align="center">
+          <asp:Button ID="updateButton" Text="Update" OnClick="do_update" runat="server" />
+          &nbsp;<asp:Button ID="deleteButton" Text="Delete" OnClick="do_delete" runat="server" />
+          <br />
+        </td>
+      </tr>
+    </table>
+  </div>

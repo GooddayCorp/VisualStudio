@@ -1,0 +1,81 @@
+﻿body
+{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+}
+.popup {
+  border: outset 4px Gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: none;
+  position: fixed;
+  left: 10px;
+  top: 50px;
+  z-index: 100;
+}
+.popuptitle {
+  background-position: center;
+  background: teal;
+  color: black;
+  font-weight: bold;
+  font-size: 12pt;
+  height: 15px;
+  padding: 10px;
+  border-bottom: solid 1px black;
+}
+.popupbody {
+  background-position: inherit;
+  background: #ddd;
+  padding: 10px 5px 0px 5px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cellleft
+{
+    width: 100px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 20px;
+}
+.textbox
+{
+  margin: 1px;
+  width: 200px;
+  height: 16px;
+}
+.table
+{
+   padding: 3px;
+}
+.cellright
+{
+  margin: 3px;
+  text-align: right;
+}
+.buttonpopup
+{
+  border-style: none;
+  background-color: #DDDDDD;
+  color: #008080;
+  font-weight: bold;
+  text-decoration: none;
+}
+.favorites
+{
+  border-style: none;
+  background-color: #FFFFFF;
+  text-align: left;
+  height: 17px;
+  width: 98px;
+  vertical-align: bottom;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 0px;
+  margin-left: 0px;
+  font-weight: bold;
+  color: #0000FF;
+  text-decoration: underline;
+}

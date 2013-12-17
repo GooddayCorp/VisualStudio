@@ -1,0 +1,3 @@
+	<div id="footer">© Alabama Constitution Village Foundation 2010 - <a href="maintenance.aspx">Administration</a><br />
+      Powered by: <a href="http://www.customdesigndb" target="_blank">Custom Design DB</a>
+  </div>  

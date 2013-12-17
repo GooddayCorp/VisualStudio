@@ -1,0 +1,417 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterRoot.master.cs" Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="asp" assembly="System.Web.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" namespace="System.Web.UI.WebControls" %>
+
+<%@ Register TagPrefix="asp" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit"  %>
+
+<%@ Register TagPrefix="MY" TagName="popup" src="~/Goodday/Favorites/PMFavorites.ascx" %>
+
+<%@ Register TagPrefix="MY" TagName="mainmenu" src="~/MasterMenus/mainmenu.ascx" %>
+<%@ Register TagPrefix="add" TagName="AddTask" src="~/Calendar/AddTask.ascx" %>
+
+<%@ Register TagPrefix="calendar" TagName="DataCalendar" src="~/Calendar/DataCalendar.ascx" %>
+
+<%@ Register TagPrefix="dc" Namespace="DataControls" Assembly="DataCalendar" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title></title>
+  <meta name="ROBOTS" content="INDEX, FOLLOW" />
+  <script src="js/sitesearch.js" type="text/javascript"></script>
+  <script src="js/PopupFunctions.js" type="text/javascript"></script>
+  <script src="js/FadeGrayoutPopup.js" type="text/javascript"></script> 
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+  
+  <link rel="icon" href="http://charitynorth.gooddaycorp.com/favicon.ico" type="image/x-icon" />  
+  <link rel="shortcut icon" href="http://charitynorth.gooddaycorp.com/favicon.ico" />  
+  <asp:ContentPlaceHolder id="headCodeBlock" runat="server">
+  </asp:ContentPlaceHolder>
+  
+  <link href="~/css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="~/css/popup.css" rel="stylesheet" type="text/css" />
+  <link href="~/css/branding.css" rel="stylesheet" type="text/css" />  
+  <link href="~/css/admin.css" rel="stylesheet" type="text/css" />
+  <link href="~/css/ajax.css" rel="stylesheet" type="text/css" /> 
+  <link href="~/css/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+  <asp:ContentPlaceHolder id="headercontent" runat="server">
+  </asp:ContentPlaceHolder>   
+    <script language="javascript" type="text/javascript">
+      // <!CDATA[
+      function Button1_onclick() {
+        toggle('collapsibleDiv');
+        //toggleDivs('collapsibleDiv');
+      }
+			function validate() {
+				alert("Click on the Members Menu to see your tickets.");
+			}
+			var p;
+			function popupOn(p) {
+				fade(p, true);
+				showPopup(p);
+			}
+			function showLogin() {
+				try {
+					popupOn('login')
+				}
+				catch (e) {
+					alert('Login failed, please try again.')
+				}
+			}
+			function cancelButton_onmousedown() {
+				popupOff('login');
+				window.open(URL = "./Home.aspx", name = "_self", fullscreen = "yes", replace = false);
+			}
+			function recoverpasswordButton_onmousedown() {
+				popupOff('login');
+				window.open(URL = "Goodday/passwordrecovery.aspx", name = "_self", fullscreen = "yes", replace = false);
+			}
+			// toggle style display parameter
+			function toggle(obj) {
+				var el = document.getElementById(obj);
+				if (el.style.display != 'none') {
+					el.style.display = 'none';
+				}
+				else {
+					el.style.display = 'block';
+				}
+			}
+	// ]]>
+		</script>  
+		<%--    http://tuvianblog.com/2012/09/27/how-to-create-a-drag-able-and-resizable-div-in-asp-netc-or-how-to-make-a-div-drag-able-and-resizable-using-jquery-in-asp-netc/--%>
+<%--		<script type="text/javascript">  
+			$(document).ready(function() {
+				$("#collapsibleDiv").resizable();
+				$("#collapsibleDiv").draggable();
+			});
+		</script>--%>
+</head>
+ 
+<body class="gooddaycorp" >
+  <form id="ClientForm" method="get" 
+    action="" 
+    onsubmit="javascript:void(0); search(this); return false;">
+    <div id="div1"></div>
+    <div id="div2"></div>	
+    <table id="Table1" class="header">
+      <tr class="toprow" >
+          <td class="toprowleft">
+          </td>
+          <td class="toprowmiddle">
+              <asp:LoginName ID="LoginName1" runat="server" />
+          </td>
+          <td class="alignright">
+          </td>
+        </tr>
+      <tr >
+        <td class="imageheader">
+        </td>
+        <td class="banner">
+          GoodDay Corp</td>
+        <td >
+        </td>
+      </tr>
+      <tr >
+        <td class="olive">
+          <input type="text" id="srchval" />
+          <input id="searchButton"  name="searchButton" type="submit" value="Search" />
+        </td>
+        <td />
+        <td />
+      </tr>
+    </table>  
+</form>
+
+  <form id="ServerForm" class="buttonmaster"  runat="server" >
+<%--      <asp:Label id="Msg" ForeColor="maroon" runat="server" /><br />
+--%>      
+      <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+      </asp:ToolkitScriptManager>
+      
+    <table id="Body" class="body" >      
+
+      <tr class="nav2">
+        <td class="topLeft">
+           <input id="Button1" 
+            type="button" 
+            value="" 
+            class="backbutton"
+            onmousedown="javascript:history.go(-1)"
+            />
+           <input 
+            id="Button3" 
+            type="button" 
+            value="PM Favorites"
+            class="buttonmasterCopy" 
+            onmousedown="toggle('pmfavorites')"/>
+           <%--&nbsp;|&nbsp;&nbsp;--%>
+        </td>
+        <td class="columnContent">
+           <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" 
+            StaticDisplayLevels="2"
+            StaticEnableDefaultPopOutImage="False"  
+            Orientation="Horizontal">
+             <DynamicMenuStyle BorderStyle="Solid" BorderWidth="1px" BorderColor="Black" 
+               HorizontalPadding="10px" />
+             <DynamicMenuItemStyle ItemSpacing="5px" />
+            <StaticItemTemplate>
+              <%# Eval("Text") %>&nbsp;&nbsp;&nbsp;&nbsp;|
+            </StaticItemTemplate>
+          </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        </td>
+        <td id="loginbutton">
+          <asp:LoginStatus ID="LoginStatus" class="buttonmasterCopy" runat="server"/>
+        &nbsp;&nbsp;</td>
+      </tr>
+      <tr class="title">
+        <td class="imagebutton">
+          <asp:HyperLink ID="linkhome" runat="server" 
+            NavigateUrl="~/Default.aspx" 
+            ToolTip="Resume Home">Home </asp:HyperLink>
+        </td>
+        <td class="columnContent">
+          <asp:Label ID="Label1" runat="server"> <script type="text/javascript">
+              document.write(document.title);
+            </script></asp:Label>
+        </td>
+        <td />         
+      </tr>
+      <tr class="gray">
+        <td class="columnLeft" > <br/>       
+          <MY:mainmenu runat="server" ID="MainMenu"/>
+          <asp:XmlDataSource 
+            ID="MainMenuData" 
+            runat="server" 
+            DataFile="~/MasterPages/MenuSide.xml">
+          </asp:XmlDataSource>
+          <br />
+        </td>
+        <td class="content" >
+          <asp:ContentPlaceHolder id="bodycontent" runat="server">
+          </asp:ContentPlaceHolder>
+        </td>
+        <td class="columnRight" >
+        <%--vertical writing of button text only good for IE--%>
+          <input id="calButton" type="button" value="Scheduler" 
+          style="-ms-writing-mode: tb-rl;" 
+            onclick="return Button1_onclick()" />    
+        </td>
+      </tr>
+      <tr class="gray">
+        <td class="columnLeft">
+        </td>
+        <td />
+        <td />
+      </tr>
+      <tr class="nav2">
+        <td>
+          <a href="#top">TOP</a>
+        </td>
+        <td>
+<%--           <div id="google_translate_element"></div>
+            <script type="text/javascript">
+             function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+              }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>      
+ --%>
+        </td>
+        <td >
+<%--          <asp:HyperLink ID="HyperLink2" runat="server" 
+            ImageUrl="~/GoodDay/Images/linkedin.ico" 
+            NavigateUrl="http://www.linkedin.com/pub/mike-lanham/1b/2a7/60b" 
+            Width="20px" Class="socialLinks">HyperLink</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink3" runat="server" 
+            ImageUrl="~/GoodDay/Images/facebook.ico" 
+            NavigateUrl="http://www.facebook.com/mike.lanham.73" Width="20px" 
+            Class="socialLinks">HyperLink</asp:HyperLink>
+          <asp:HyperLink ID="HyperLink1" runat="server" 
+            ImageUrl="~/GoodDay/Images/mantaFlavicon.png" 
+            NavigateUrl="http://www.manta.com/c/mxjrft3/gml-consulting-service" Width="20px" 
+            Class="socialLinks">HyperLink</asp:HyperLink>         --%>
+        </td>
+      </tr>
+    </table>
+    <div id="bottom">
+      <asp:ContentPlaceHolder id="footercontent" runat="server"></asp:ContentPlaceHolder>
+    </div>   
+    <div id="login" class="popup" >
+      <div class="popuptitle">Login</div>
+      <div class="popupbody2">       
+          <asp:Login ID="Login1" runat="server" 
+            TitleText="" 
+            onloggedin="OnLoggedIn" 
+            Orientation="Vertical" 
+            FailureText="Login failed, please try again." 
+            RememberMeText="Remember me" 
+            UserNameLabelText="User:" 
+            ToolTip="Guest password is &quot;guest&quot;." 
+            UserName="guest" LoginButtonText="Submit" >
+          </asp:Login>
+          <input id="cancelButton" class="inputButton"
+            type="button" 
+            value="Cancel"                                   
+            onclick="return cancelButton_onmousedown()" />
+          <br /><br />
+          <input id="registerButton" class="buttonpopup"
+            type="button" 
+            value="Register" 
+            onmousedown="toggle('register')" 
+            onmouseup="toggle('login')" />
+          <br />
+          <input id="changepasswordButton" class="buttonpopup"
+            type="button" 
+            value="Change Password" 
+            onmousedown="toggle('passwordchange')" 
+            onmouseup="toggle('login')" />
+          <br />
+          <input id="recoverpasswordButton" class="buttonpopup"
+            type="button" 
+            value="Recover Password" 
+            onclick="javascript:window.open(URL='./Goodday/pwdRecovery.aspx',name='_self',fullscreen='yes',replace=false);" />
+      </div>
+    </div>
+    <div id="passwordchange" class="popup">
+      <div class="popuptitle">
+        Change Password</div>
+      <div class="popupbody">
+        <asp:ChangePassword ID="ChangePassword" runat="server" 
+          ContinueDestinationPageUrl="~/login.aspx"
+          DisplayUserName="True">
+        </asp:ChangePassword>
+      </div>
+    </div>
+    <div id="register" class="popup">
+      <div class="popuptitle">Register</div>
+      <div class="popupbody">
+        <asp:Label id="Msg" ForeColor="maroon" runat="server" /><br />
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" 
+          ContinueDestinationPageUrl="~/Default.aspx"
+          oncreateduser="CreateUserWizard1_CreatedUser">
+          <WizardSteps>
+            <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server" />
+            <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server" />
+          </WizardSteps>
+        </asp:CreateUserWizard>  
+        <input 
+          type="button" 
+          value="Change Password" 
+          class="buttonpopup" 
+          onmousedown="popupOn('passwordchange')"
+          onmouseup="toggle('register')" />
+      </div>
+    </div>
+    <div id="passwordrecovery" class="popup">
+      <div class="popuptitle">Recover Password</div>
+      <div class="popupbody">
+        <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" 
+          onsendingmail="PasswordRecovery1_SendingMail" >                           
+          <MailDefinition From="mike@gooddaycorp.com" Subject="Forgetton Password" Priority="High">
+          </MailDefinition>
+          <UserNameTemplate>
+              <span style="text-align:center">
+              <font face="Verdana">
+<%--              <h3>Forgot Password </h3>
+--%>              UserName: 
+              <asp:TextBox ID="UserName" runat="server" 
+                  Width="150px"></asp:TextBox>&nbsp;
+                  <asp:Button ID="SubmitButton" runat="server" 
+                  Text="Submit" 
+                  CommandName="Submit" 
+                  onmouseup="popupOn('passwordrecovery')" 
+                  />
+                  <br />
+              <span  style="color: #FF0000">
+              <asp:Literal ID="FailureText" runat="server"></asp:Literal>
+              </span>
+              </font> 
+              </span>                    
+          </UserNameTemplate>
+          <QuestionTemplate>
+<%--          <h2>Forgot Password</h2>
+--%>          Hello <asp:Literal ID="UserName" runat="server"></asp:Literal><br />
+          Please answer your password question: <br />
+          <asp:Literal ID="Question" runat="server"></asp:Literal>
+          <asp:TextBox ID="Answer" runat="server"></asp:TextBox><br />
+           <asp:Button ID="SubmitButton" class="inputButton" runat="server" 
+            Text="Send" 
+            onmousedown="popupOn('passwordrecovery')" 
+            CommandName="Submit"/>
+            <br />
+           <asp:Literal ID="FailureText" runat="server"></asp:Literal>
+          </QuestionTemplate>
+          <SuccessTemplate>
+          Your password has been sent to:
+          <asp:Label ID="EmailLabel" runat="server"></asp:Label>
+          </SuccessTemplate>
+        </asp:PasswordRecovery>
+        <input 
+        type="button" 
+        value="Close"             
+        id="Button2" 
+        class="inputButton" 
+        onclick="return cancelButton_onmousedown()" />
+        <br /> 
+        <br />
+      </div>
+    </div>
+    <div id="Help" class="popup">
+      <div class="popuptitle">
+        Help</div>
+      <div class="popupbody">
+        <MY:popup runat="server" ID="popup2" />
+        <input type="button" class="buttonpopup" value="Close" onload="popupOn('Help')" onclick="toggle('Help')" />
+      </div>
+    </div>
+    <div id="pmfavorites" class="popup" >
+      <div class="popupbody">
+        <MY:popup runat="server" ID="popup1"/>       
+        <input 
+          type="button"
+          class="buttonpopup"
+          value="Close"
+          onload="popupOn('pmfavorites')" 
+          onclick="toggle('pmfavorites')" />
+      </div>
+    </div>
+    <div  id="collapsibleDiv" >
+      <asp:Accordion ID="CalendarAccordion" runat="server" 
+        HeaderCssClass="accordionHeader" FadeTransitions="True" 
+        RequireOpenedPane="False">                  
+        <Panes >              
+          <asp:AccordionPane ID="AccordionPane1" runat="server"
+            SelectedIndex="0"
+            HeaderCssClass="accordionHeader" 
+            HeaderSelectedCssClass="accordionHeaderSelected"
+            ContentCssClass="accordionContent" 
+            FadeTransitions="true" FramesPerSecond="40" 
+            TransitionDuration="250" 
+            Height="400px" AutoSize="None" 
+            RequireOpenedPane="false" SuppressHeaderPostbacks="true" >
+            <Header >Calendar</Header>
+            <Content >
+             <iframe id="datacalendar" src="Calendar/DataCalendar.aspx" 
+                style="border-style: solid; border-width: 0px; 
+                padding: 2px; top:0px;
+								height: 400px; width: 204px; overflow: auto;" >             
+             </iframe>
+           </Content>
+          </asp:AccordionPane>          
+          <asp:AccordionPane ID="AccordionPane4" runat="server">
+            <Header>Add Task</Header>
+            <Content>
+              <add:AddTask runat="server" ID="AddTask1"/>
+            </Content>
+          </asp:AccordionPane>
+        </Panes>
+      </asp:Accordion>
+    </div>
+  </form>
+</body>
+</html>

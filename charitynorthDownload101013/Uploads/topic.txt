@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes" ?>
+<lookup>
+<!-- START OF: Topping -->
+  <topping>
+    <value>supreme</value>
+    <desc>Supreme</desc>
+  </topping>
+  <topping>
+    <value>italianclassic</value>
+    <desc>Italian Classic</desc>
+  </topping>
+  <topping>
+    <value>meatlover</value>
+    <desc>Meat Lover</desc>
+  </topping>
+<!-- END OF: Topping -->
+
+<!-- START OF: Crust -->
+  <crust>
+    <value>original</value>
+    <desc>Original Crust</desc>
+  </crust>
+  <crust>
+    <value>handstretched</value>
+    <desc>Hand-Stretched Crust</desc>
+  </crust>
+  <crust>
+    <value>pan</value>
+    <desc>Pan Crust</desc>
+  </crust>
+<!-- END OF: Crust -->
+</lookup>

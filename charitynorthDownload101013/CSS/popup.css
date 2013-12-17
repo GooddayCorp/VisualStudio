@@ -1,0 +1,242 @@
+﻿body
+{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  overflow: auto;
+}
+.sliderButton
+{
+	position: absolute;
+	top: 250px;
+	width: 40px;
+	height: 130px;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFCC00;
+	font-size: 8pt;
+	padding: 5px 0px 0px 15px;
+	border: solid 2px #DDDDDD;
+	border-radius: 15ex;
+	-webkit-border-radius: 15ex;
+	-moz-border-radius: 15ex;
+	background-color: teal;
+	cursor: pointer;
+}
+#calendarButton
+{
+	position: absolute;
+	top: 250px;
+	right: -25px;
+	width: 40px;
+	height: 130px;
+	vertical-align: middle;
+	text-align: left;
+	color: #FFCC00;
+	font-size: 8pt;
+	padding: 5px 0px 0px 15px;
+	border: solid 2px #DDDDDD;
+	border-radius: 15ex;
+	-webkit-border-radius: 15ex;
+	-moz-border-radius: 15ex;
+	background-color: teal;
+	cursor: pointer;
+}
+#calendarDiv
+{
+	position: absolute;
+	top: 260px;
+	right: 0px;
+	margin: 0px;
+	display: block;
+	background-image: url('../ImagesRoot/grayGradient.png');
+	background-repeat: repeat-x;	
+	border: 2px solid teal;
+	width: 234px;
+	height: auto;
+	padding: 2px;
+	color: Black;
+	font-size: 10pt;
+	overflow: hidden;/**/
+}
+#searchDiv 
+{
+	position:inherit;
+	width:230px; height:1px;	
+	top:265px; left:-280px;
+	background-image: url('../ImagesRoot/grayGradient.png');
+	background-repeat: repeat-x;	
+	border: solid 2px teal;
+	overflow:auto;
+}
+#inputDiv
+{
+	width:235px; height:auto;
+	border-right:solid 1px black;
+	border-bottom:solid 1px teal;
+	padding: 10px 10px 10px 10px;
+	overflow: hidden;
+	background-color:#CCCC98;		
+}
+#resultsPane
+{
+	width:235px; 
+	background-image: url('../ImagesRoot/grayGradient.png');
+	background-repeat: repeat-x;	
+	padding: 0px 10px 0px 10px;
+	Color:black; font-size: 10pt; font-weight:lighter;
+	border-right:solid 1px black;
+	border-bottom:solid 1px black;
+	overflow: hidden;
+}
+.popupDiv
+{
+  background-color: #FFFFFF;
+}
+.popup {
+  border: outset 4px Gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: none;
+  position: fixed;
+  left: 170px;
+  top: 230px;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  overflow: hidden;/**/
+
+}
+.popuptitle {
+  background-position: center;
+  background: teal;
+  color: black;
+  font-weight: bold;
+  font-size: 12pt;
+  height: 15px;
+  padding: 10px;
+  border-bottom: solid 1px black;
+}
+.popupbody {
+  background-position: inherit;
+  background: #ddd;
+  padding: 10px 5px 0px 5px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  width: auto;
+  position: relative;
+  z-index: 9998;
+  overflow: auto;/**/
+
+}
+.popupbody2
+{
+  background-position: inherit;
+  background: #ddd;
+  padding: 10px 5px 0px 5px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  position: relative;
+  z-index: 9999;
+  overflow: auto;/**/
+
+}
+.calendar {
+  border: outset 4px Gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: none;
+  position: relative;
+  left: 170px;
+  top: 530px;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  overflow: auto;/**/
+
+}
+.cellleft
+{
+    width: 100px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 20px;
+}
+.textbox
+{
+  margin: 1px;
+  width: 200px;
+  height: 16px;
+}
+.table
+{
+  padding: 3px;
+}
+.cellright
+{
+  margin: 3px;
+  text-align: right;
+}
+.buttonpopup
+{
+  border-style: none;
+  background-color: #DDDDDD;
+  color: #008080;
+  font-weight: bold;
+  text-decoration: none;
+}
+.favorites
+{
+  border-style: none;
+  background-color: #FFFFFF;
+  text-align: left;
+  height: 17px;
+  width: 187px;
+  vertical-align: bottom;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 0px;
+  margin-left: 0px;
+  font-weight: bold;
+  color: #0000FF;
+  text-decoration: underline;
+}
+.inputButton
+{
+  height: 22px;
+  float: right;
+  width: 64px;
+}
+
+
+
+.accordionHeader
+{
+  background-color: #CCCC98;
+  color: #000000;
+  padding: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  cursor: pointer;
+}
+#googleScript
+{
+	position: absolute;
+	right: 0px;
+	top: 17px;
+}
+.goldGradient {
+		color: #EFD51F;
+		/* For WebKit (Safari, Google Chrome etc) */
+		background: -webkit-gradient(linear, left top, left bottom, from(#EFD51F), to(#F4E67F));
+		/* For Mozilla/Gecko (Firefox etc) */
+		background: -moz-linear-gradient(top, #EFD51F, #F4E67F);
+		/* For Internet Explorer 5.5 - 7 */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFD51F, endColorstr=#F4E67F);
+		/* For Internet Explorer 8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFD51F, endColorstr=#F4E67F)";
+	} 

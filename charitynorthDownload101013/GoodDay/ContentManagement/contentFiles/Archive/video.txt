@@ -1,0 +1,14 @@
+<h4>Welcome to Visions of Vets</h4>
+	<script type="text/javascript">
+	  var playerStr;
+	  var videoStr;
+	  var imageStr;
+	  playerStr = "jwplayer/player.swf";
+	  videoStr = "media/wheelchairrace.flv";
+	  imageStr = "media/example.jpg"
+		jwplayer("mediaplayer").setup({
+			flashplayer: playerStr,
+			file: videoStr,
+			image: imageStr
+		});
+	</script>

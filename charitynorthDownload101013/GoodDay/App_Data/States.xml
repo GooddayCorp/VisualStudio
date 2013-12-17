@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<states>
+    <state abbr="AL" name="Alabama" />
+    <state abbr="AK" name="Alaska" />
+    <state abbr="AZ" name="Arizona" />
+    <state abbr="AR" name="Arkansas" />
+    <state abbr="CA" name="California" />
+    <state abbr="CO" name="Colorado" />
+    <state abbr="CT" name="Connecticut" />
+    <state abbr="DE" name="Delaware" />
+    <state abbr="DC" name="District of Columbia" />
+    <state abbr="FL" name="Florida" />
+    <state abbr="GA" name="Georgia" />
+    <state abbr="GU" name="Guam" />
+    <state abbr="HI" name="Hawaii" />
+    <state abbr="ID" name="Idaho" />
+    <state abbr="IL" name="Illinois" />
+    <state abbr="IN" name="Indiana" />
+    <state abbr="IA" name="Iowa" />
+    <state abbr="KS" name="Kansas" />
+    <state abbr="KY" name="Kentucky" />
+    <state abbr="LA" name="Louisiana" />
+    <state abbr="ME" name="Maine" />
+    <state abbr="MD" name="Maryland" />
+    <state abbr="MA" name="Massachusetts" />
+    <state abbr="MI" name="Michigan" />
+    <state abbr="MN" name="Minnesota" />
+    <state abbr="MS" name="Mississippi" />
+    <state abbr="MO" name="Missouri" />
+    <state abbr="MT" name="Montana" />
+    <state abbr="NE" name="Nebraska" />
+    <state abbr="NV" name="Nevada" />
+    <state abbr="NH" name="New Hampshire" />
+    <state abbr="NJ" name="New Jersey" />
+    <state abbr="NM" name="New Mexico" />
+    <state abbr="NY" name="New York" />
+    <state abbr="NC" name="North Carolina" />
+    <state abbr="ND" name="North Dakota" />
+    <state abbr="OH" name="Ohio" />
+    <state abbr="OK" name="Oklahoma" />
+    <state abbr="OR" name="Oregon" />
+    <state abbr="PA" name="Pennsylvania" />
+    <state abbr="PR" name="Puerto Rico" />
+    <state abbr="RI" name="Rhode Island" />
+    <state abbr="SC" name="South Carolina" />
+    <state abbr="SD" name="South Dakota" />
+    <state abbr="TN" name="Tennessee" />
+    <state abbr="TX" name="Texas" />
+    <state abbr="UT" name="Utah" />
+    <state abbr="VT" name="Vermont" />
+    <state abbr="VI" name="Virgin Islands" />
+    <state abbr="VA" name="Virginia" />
+    <state abbr="WA" name="Washington" />
+    <state abbr="WV" name="West Virginia" />
+    <state abbr="WI" name="Wisconsin" />
+    <state abbr="WY" name="Wyoming" />
+</states>

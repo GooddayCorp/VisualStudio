@@ -1,0 +1,402 @@
+body.gooddaycorp {
+  margin: 0 Auto;
+  width: 1024px;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  background-color: navy;
+}
+table.header {
+  width: 1024px;
+  vertical-align: middle;
+  table-layout: fixed;
+  background-color: white;
+}
+.topMenu
+{
+ /* padding-bottom: 5px;
+  margin-bottom: 5px;*/
+}
+table.body {
+	width: 1024px;
+	text-align: left;
+	vertical-align: top;
+	float: left;
+	table-layout: fixed;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	empty-cells: hide;
+	color: black;
+	background-color: #DCD3CA;
+}
+h4
+{
+  font-weight: bolder;
+  margin-top: 2em;
+}
+p + p
+{
+  margin: 1em 0;
+}
+
+.imageheader {
+  border-style: none solid none none;
+  border-width: 0px 1px 0px 0px;
+  width: 250px;
+  height: 156px;
+  background-image: url("../ImagesRoot/pert.jpg");
+  background-repeat: no-repeat;
+  background-color: rgb(204, 204, 152);
+  vertical-align: bottom;
+}
+.banner {
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(0, 128, 128);
+  font-family: "Times New Roman";
+  font-size: 36pt;
+  font-style: italic;
+  font-weight: bold;
+  background-color: white;
+}
+.nav2 {
+	background-position: top;
+	vertical-align: middle;
+	text-align: justify;
+	text-indent: 10px;
+	height: 30px;
+	border-width: thick 0px;
+	border-style: solid none;
+	border-color: black;
+	font-weight: normal;
+	text-decoration: none;
+	color: rgb(0, 128, 128);
+	background-color: rgb(239, 213, 31);
+	background-image: url('../ImagesRoot/goldGradient.png');
+	background-repeat: repeat-x;
+}
+.nav2 a:hover {	color: black; font-weight: bolder; text-decoration: none;	}
+.nav2 a:link {	color: teal; font-weight: bold; text-decoration: none;	}
+.nav2 a:visited {	color: teal; text-decoration: none;	}
+.nav2b {
+	border: 0px rgb(0, 0, 0); 
+	text-align: left; 
+	line-height: 15px; 
+	padding-left: 8px; 
+	text-decoration: none; 
+	vertical-align: middle; 
+	background-color: navy;	
+}
+.nav2b a:hover {	color: rgb(239, 213, 31);	}
+.nav2b a:link {	color: teal; font-weight: bold; text-decoration: none;	}
+.nav2b a:visited {	color: teal; font-weight: bold; text-decoration: none;	}
+.backbutton {
+  border-style: none;
+  border-width: 0px;
+  width: 17px;
+  background-image: url('../GoodDay/Images/back16.ico');
+  background-repeat: no-repeat;
+  background-color: #EFD51F;
+  vertical-align: middle;
+  height: 15px;
+  padding-top: 5px;
+}
+.favorites {
+  border: 0px none #FFFFFF;
+  width: 98px;
+  height: 17px;
+  text-align: left;
+  color: rgb(0, 0, 255);
+  padding-left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  text-decoration: underline;
+  margin-left: 0px;
+  vertical-align: bottom;
+  background-color: rgb(255, 255, 255);
+}
+.buttonmaster {
+  border-style: none;
+  border-width: 0px;
+  color: rgb(0, 128, 128);
+  background-color: rgb(239, 213, 31);
+  vertical-align: bottom;
+  font-weight: bold;
+  /**/
+}
+.buttonmasterCopy
+{
+	border-style: none;
+	border-width: 0px;
+	background-color:Transparent;
+	color: rgb(0, 128, 128);
+	font-weight: bold;
+	font-size: 15px;
+	padding-top: 4px;
+}
+/*.popuptitle {
+  background-position: center;
+  background: teal;
+  color: black;
+  font-weight: bold;
+  font-size: 12pt;
+  height: 15px;
+  padding: 10px;
+  border-bottom: solid 1px black;
+}
+div.popupbody
+{
+  position: fixed;
+  top: 220px;
+  left: 220px;
+  border: 4px outset gray;
+  background: rgb(221, 221, 221);
+  padding: 10px 5px 0px;
+  text-align: left;
+}
+.popup {
+  display: none;
+  z-index: 100;
+}
+.buttonpopup {
+  border: 0px none #FFFFFF;
+  color: rgb(0, 128, 128);
+  font-weight: bold;
+  background-color: rgb(221, 221, 221);
+}*/
+tr.title {	
+  text-align: left; 
+  vertical-align: middle; 
+  padding: 0px 90px 0px 0px; 
+  border: 0px rgb(0, 0, 0); 
+  height: auto; 
+  color: black; 
+  text-indent: 10px; 
+  font-size: 18px; 
+  background-color: rgb(220, 211, 202);	
+}
+.title a:link {	padding: 0px 0px 0px 50px; color: teal; font-size: 12pt; font-weight: normal; text-decoration: none; vertical-align: middle; float: left;	}
+.title a:visited {	color: teal; font-size: 12pt; font-weight: bold; text-decoration: none; vertical-align: middle; float: left;	}
+.title a:hover {	color: rgb(239, 213, 31); font-size: 14pt; font-weight: bold; text-decoration: none; vertical-align: middle; float: left;	}
+.title a:active {}
+
+.imagebutton {
+	vertical-align: middle;
+	height: 58px;
+	visibility: visible;
+	background-image: url('../ImagesRoot/cityscape150.jpg');
+	background-repeat: no-repeat;
+}
+.gray {
+	background-position: top;
+	background-color: white;
+	padding-left: 10px;
+	background-image: url('../ImagesRoot/grayishtan.png');
+	background-repeat: repeat-x;
+}
+.columnLeft {
+	vertical-align: top;
+	float: left;
+	padding-left: 10px;
+}
+.columnContent {
+  width: 660px;
+  vertical-align: middle;
+}
+.content {
+  width: 660px;
+  padding: 10px;
+  font-weight: normal;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: white;
+}
+.content a:link {	color: teal; font-weight: bold; text-decoration: none;	}
+.content a:hover {	color: rgb(239, 213, 31);	}
+.content a:visited {	color: teal; font-weight: bold; text-decoration: none;	}
+.content a:active {	color: teal; font-weight: bold; text-decoration: none;	}
+.pictureleft {	margin-right: 10px;	}
+
+.floatleft {	margin: 0px 0px 10px 10px; border: 0px rgb(0, 0, 0); width: 205px; vertical-align: top; float: left;	}
+.floatright {	margin: 0px 0px 10px 10px; border: 0px rgb(0, 0, 0); width: 205px; vertical-align: top; float: right;	}
+.toprow {	height: 18px; text-align: right; color: rgb(255, 204, 0); text-decoration: none; background-color: navy;	}
+.toprow a:hover {	color: teal; font-weight: bolder; text-decoration: none;	}
+.toprow a:link {	color: rgb(255, 204, 0); font-weight: bold; text-decoration: none;	}
+.toprow a:visited {	color: rgb(255, 204, 0); text-decoration: none;	}
+.toprowleft {
+  width: 253px;
+  text-align: left;
+  color: rgb(255, 204, 0);
+  text-decoration: none;
+  background-color: navy;
+  vertical-align: middle;
+}
+.topLeft
+{
+  width: 253px;
+}
+.toprowleft a:hover {	color: teal; font-weight: bolder; text-decoration: none;	}
+.toprowleft a:link {	color: rgb(255, 204, 0); font-weight: bold; text-decoration: none;	}
+.toprowleft a:visited {	color: rgb(255, 204, 0); text-decoration: none;	}
+.toprowmiddle {
+  width: 600px;
+  text-align: right;
+  color: rgb(255, 204, 0);
+  text-decoration: none;
+  background-color: navy;
+}
+.clinks {		}
+.clinks a:link {	color: teal; font-weight: bold; text-decoration: none;	}
+.clinks a:hover {	color: rgb(239, 213, 31);	}
+.clinks a:visited {	color: teal; font-weight: bold; text-decoration: none;	}
+.clinks a:active {}
+.heading
+{
+  font-weight: bold;
+}
+ul
+{
+  padding: 14px;
+  margin: 0px;
+  list-style-type: none;
+}
+ul li
+{
+  padding: 0px;
+  margin: 0px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.alignright {
+	text-align: right; 
+	vertical-align: top;	
+}
+
+/*
+.cellleft {	width: 100px; text-align: left; line-height: 20px; vertical-align: top;	}
+.cellright {	margin: 3px; text-align: right;	}
+
+
+
+
+.list {	list-style-type: disc; list-style-position: outside;	}
+
+
+
+.sectiontitle {	font-family: Arial, Helvetica, sans-serif; font-size: large;	}
+.style1 {
+  width: 600px;
+  margin-right: 5px;
+  background-color: white;
+}
+.table {	padding: 3px;	}
+.textbox {	margin: 1px; width: 200px; height: 16px;	}
+
+.popuptitle {	background: teal; padding: 10px; height: 15px; color: black; font-size: 12pt; font-weight: bold; border-bottom-color: black; border-bottom-width: 1px; border-bottom-style: solid;	}
+
+
+
+
+
+
+table
+{
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: inherit;
+  empty-cells: show;
+}
+.formtable
+{
+  border-collapse: separate;
+  border-spacing: 2px;
+  table-layout: auto;
+  margin-right: 10px;
+}
+.listtable
+{
+  margin-left: 10px;
+}
+
+*/
+
+
+
+.loginstatus
+{
+  text-align: center;
+  vertical-align: middle;
+}
+.olive
+{
+  background-color: #CCCC9A;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+.cancelButton
+{
+  float: right;
+}
+input#Button3
+{
+}
+.displayToggle
+{
+  display: none;
+}
+.columnRight
+{
+  vertical-align: top;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+.adminTable
+{
+  border-collapse: collapse;
+  border-spacing: 10px;
+}
+.middleSpacerColumn
+{
+  width: 0px;
+}
+.socialsciencebutton
+{
+  border: 0px none #FFFFFF;
+  width: 120px;
+  height: 17px;
+  text-align: left;
+  color: rgb(0, 0, 255);
+  padding-left: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+  text-decoration: underline;
+  margin-left: 0px;
+  vertical-align: bottom;
+  background-color: rgb(255, 255, 255);
+}
+.titleRow
+{
+  background-color: #dcd3ca;
+  padding: 20px 20px 5px 20px;
+}
+.stocks
+{
+  background-color: #dcd3ca;
+  width: 872px;
+  vertical-align: middle;
+}
+.socialLinks
+{
+  vertical-align: middle;
+}
+#calendarPageDiv 
+{
+	background:transparent;
+}
